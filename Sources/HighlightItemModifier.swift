@@ -32,7 +32,7 @@ public extension View {
      - onTap: A closure representing the action to be performed when the highlighted area is tapped.
      - Returns: A modified view with the specified highlight behavior.
    */
-  func highlight<Item: Hashable, ItemShape: View, OverlayView: View>(
+  func highlight<Item: Hashable, ItemShape: View>(
     _ item: Item?,
     @ViewBuilder itemShape: @escaping ()->ItemShape = { Rectangle() },
     onTap: @escaping ()->Void
