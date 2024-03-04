@@ -33,6 +33,7 @@ struct MyPage: View {
   }
 }
 ```
+See `Examples/Example1.swift` for the demo video's code.
 # Custom Highlight Shapes
 You can define custom highlight shapes for each identifier using the .highlight(id) modifier:
 
