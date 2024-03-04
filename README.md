@@ -7,6 +7,11 @@ SwiftUISpotlight: Easily add highlighting functionality to SwiftUI views.
 
 SwiftUISpotlight is your go-to repository for adding highlighting functionality to SwiftUI views with ease. Whether you need to emphasize specific areas within your app or guide users' attention, our `highlight` function simplifies the process. Define custom shapes for different items and handle taps effortlessly.
 
+
+
+# Basic Highlighting
+Here's a basic example of how to use SwiftUISpotlight to highlight a specific area within a view:
+
 ```swift
 struct MyPage: View {
   @State var highlightedId: String? = nil
@@ -28,3 +33,34 @@ struct MyPage: View {
   }
 }
 ```
+# Custom Highlight Shapes
+You can define custom highlight shapes for each identifier using the .highlight(id) modifier:
+
+```swift
+.highlight(id: "myComponent1") {
+    if id == "myComponent1" {
+       Circle()
+    } else {
+       Rectangle()
+    }
+}
+```
+# Adding Padding
+You can add padding to your highlightable areas using the .highlightable(id:inside:padding:) modifier:
+```swift
+.highlightable(id: "myComponent1", inside: geometry, padding: 10)
+```
+or
+
+```swift
+.highlightable(id: "myComponent1", inside: geometry, padding: .top, 10)
+```
+This allows you to customize the padding around the highlighted area.
+
+# License
+SwiftUISpotlight is available under the MIT license. See the LICENSE file for more information.
+
+
+`
+This README.md includes the additional features of defining custom highlight shapes for each identifier and adding padding to highlightable areas. It provides usage examples for each feature to help users understand how to incorporate them into their projects.
+`
