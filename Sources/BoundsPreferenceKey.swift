@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BoundsPreferenceKey<Item: Hashable>:  PreferenceKey {
+internal struct BoundsPreferenceKey<Item: Hashable>:  PreferenceKey {
   typealias Value = [Item: Anchor<CGRect>]
   
   static var defaultValue: Value { [:] }

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-extension View {
+internal extension View {
   @inlinable
-  public func reverseMask<Mask: View>(
+  func reverseMask<Mask: View>(
     alignment: Alignment = .center,
     @ViewBuilder _ mask: () -> Mask
   ) -> some View {
